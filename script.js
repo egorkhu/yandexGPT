@@ -1,8 +1,8 @@
-export const PROXY_URL = 'https://thingproxy.freeboard.io/fetch/'; //для избежания проблем с CORS
-export const API_URL = 'https://thingproxy.freeboard.io/fetch/https://llm.api.cloud.yandex.net/foundationModels/v1/completion'; // Замените на ваш URL
+const PROXY_URL = 'https://thingproxy.freeboard.io/fetch/'; //для избежания проблем с CORS
+const API_URL = 'https://llm.api.cloud.yandex.net/foundationModels/v1/completion';
 //токен необходимо менять каждые 12 часов
-export const IAM_TOKEN = 't1.9euelZrLi8mNmoqRnpDJyZGYlZGLm-3rnpWaj8jJzZrHnpyOjIyNm8zMnJHl8_cSEShO-e9BUX8d_t3z91I_JU7570FRfx3-zef1656VmoqdnIyTjJrKyZmTnMiOkpzM7_zF656VmoqdnIyTjJrKyZmTnMiOkpzM.0JLGugFXmGYWcRkDzk9rhuLvyp8m6BnIKURGwDV1rUXM_YnsM6EMoth3O14XkxL3W_czCzrkVrunBDBmbFyBDA';
-export const FOLDER_ID = 'b1gpk33mjeuna2237k6p';
+const IAM_TOKEN = 't1.9euelZrMjI-KypnGjomeiZWVkZbJx-3rnpWaj8jJzZrHnpyOjIyNm8zMnJHl9Pc6DCdO-e9ARleT3fT3ejokTvnvQEZXk83n9euelZqax42Vk5KRxs2PlpGdk5vOyu_8xeuelZqax42Vk5KRxs2PlpGdk5vOyg.59V3enQKDupbnhxI2D_qEr9SjyY2bR4OiCAwggSjHivHxii3NbQSLcTuPhb0J4XNyrxWHL_8tlijmOTycn4CCA';
+const FOLDER_ID = 'b1gpk33mjeuna2237k6p';
 
 
 document.getElementById('submit-btn').addEventListener('click', function() {
@@ -46,5 +46,8 @@ document.getElementById('submit-btn').addEventListener('click', function() {
         .then(data => {
             gptResponse.innerHTML = '<b>Ответ:</b> ' + data.result.alternatives[0].message.text;
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            gptResponse.innerText = 'Произошла ошибка';
+        });
 });
