@@ -1,4 +1,4 @@
-const PROXY_URL = 'https://thingproxy.freeboard.io/fetch/'; //для избежания проблем с CORS
+const PROXY_URL = 'https://cors-anywhere.herokuapp.com/corsdemo'; //для избежания проблем с CORS
 const API_URL = 'https://llm.api.cloud.yandex.net/foundationModels/v1/completion';
 //токен необходимо менять каждые 12 часов
 const IAM_TOKEN = 't1.9euelZrMjI-KypnGjomeiZWVkZbJx-3rnpWaj8jJzZrHnpyOjIyNm8zMnJHl9Pc6DCdO-e9ARleT3fT3ejokTvnvQEZXk83n9euelZqax42Vk5KRxs2PlpGdk5vOyu_8xeuelZqax42Vk5KRxs2PlpGdk5vOyg.59V3enQKDupbnhxI2D_qEr9SjyY2bR4OiCAwggSjHivHxii3NbQSLcTuPhb0J4XNyrxWHL_8tlijmOTycn4CCA';
